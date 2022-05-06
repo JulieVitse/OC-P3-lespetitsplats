@@ -1,0 +1,16 @@
+$colour-primary: white;
+$colour-secondary: white;
+$colour-accent: white;
+$colour-white: white;
+$colour-invalid: white;
+
+
+$breakpoints: (
+    mobile-min: 320px,
+    mobile-max: 599px,
+    tablet-min: 600px,
+    tablet-max: 1023px,
+    desktop-small: 1024px,
+    desktop-med: 1280px,
+    desktop-large: 1600px
+);

@@ -1,0 +1,40 @@
+@mixin mobile {
+    @media screen and (min-width: map-get($breakpoints, mobile-min)) and (max-width: map-get($breakpoints, mobile-max)){
+        @content;
+    }
+}
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)){
+        @content;
+    }
+}
+@mixin desktop-small{
+    @media screen and (min-width: map-get($breakpoints, desktop-small)){
+        @content;
+    }
+}
+@mixin desktop-med{
+    @media screen and (min-width: map-get($breakpoints, desktop-med)){
+        @content;
+    }
+}
+@mixin desktop-large{
+    @media screen and (min-width: map-get($breakpoints, desktop-large)){
+        @content;
+    }
+}
+
+@mixin img-ratio {
+    width: 100%;
+        display: block;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+}
