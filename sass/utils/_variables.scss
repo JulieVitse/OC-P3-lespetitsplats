@@ -1,9 +1,30 @@
-$colour-primary: white;
-$colour-secondary: white;
-$colour-accent: white;
-$colour-white: white;
-$colour-invalid: white;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-accent: #99E2D0;
+// $color-icon: #7E7E7E;
 
+$color-white: white;
+$color-lighter: #F6F6F6;
+$color-light: #EAEAEA;
+$color-dark: #353535;
+$color-shadow: #35353533;
+
+$font-text: 'Roboto', sans-serif;
+$font-title: 'Shrikhand', cursive;
+
+$font-bolder: 900;
+$font-bold: 700;
+$font-medium: 500;
+$font-normal: 400;
+$font-light: 300;
+
+$radius: 15px, 20px, 25px;
+
+$sizes: .5rem, 1rem, 1.5rem, 2rem;
+$size1: .5rem;
+$size2: 1rem;
+$size3: 1.5rem;
+$size4: 2.5rem;
 
 $breakpoints: (
     mobile-min: 320px,

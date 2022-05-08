@@ -4,31 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ohmyfood</title>
     <link rel="shortcut icon" type="image/jpg" href=""/> <!-- favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!-- normalize css -->    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- icons -->  
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <div class="sub_body">
 
-        <header>
-            <div class="logo">
-                <a href="index.html"><img src="" alt="Logo"></a>
+        <div class="loading">
+            <div class="loading__spin">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
-            
-            <div class="menu">
+            <p class="loading__text"></p>
+        </div>
+
+        <header class="header">
+            <div class="header__logo">
+                <a href="index.html"><img src="img/logo/ohmyfood@2x.svg" alt="Ohmyfood Logo"></a>
             </div>
 
-            <nav class="nav_menu">
-            </nav>
+            <div class="header__location">
+                <i class="header__location__icon fa fa-solid fa-location-dot"></i>
+                <p class="header__location__text">Paris, Belleville</p>
+            </div>
         </header>
 <!-- ----------------------------------------------------------------------- -->
-        <main></main>
+        <main class="container">
+            <section class="hero">
+                <h1 class="hero__title">Réservez le menu qui vous convient</h1>
+                <h2 class="hero__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+                <button class="hero__btn btn">Explorer nos restaurants</button>
+            </section>
+
+            <section class="fonct wrapper">
+                <h3 class="fonct__title">Fonctionnement</h3>
+                <ul class="fonct__list">
+                    <li class="fonct__list__item">
+                        <div class="fonct__list__item__number">1</div>
+                        <i class="fonct__list__item__icon fa-solid fa-mobile-screen-button"></i>
+                        <p class="fonct__list__item__text">Choisissez un restaurant</p>
+                    </li>
+
+                    <li class="fonct__list__item">
+                        <div class="fonct__list__item__number">2</div>
+                        <i class="fonct__list__item__icon fa-solid fa-list-ul"></i>
+                        <p class="fonct__list__item__text">Composez votre menu</p>
+                    </li>
+
+                    <li class="fonct__list__item fonct__list__item--active">
+                        <div class="fonct__list__item__number">3</div>
+                        <i class="fonct__list__item__icon fonct__list__item__icon--active fa-solid fa-store"></i>
+                        <p class="fonct__list__item__text">Dégustez au restaurant</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="rest wrapper">
+                <h3 class="rest__title">Restaurants</h3>
+
+                <div class="cards-wrap">
+                    <div class="cards-wrap__card" onclick="location.href='./html/palette-du-gout.html';">
+                        <p class="cards-wrap__card__tag">Nouveau</p>
+                        <div class="cards-wrap__card__image">
+                            <img src="img/restaurants/palette-du-gout.jpg" alt="">
+                        </div>
+                        <div class="cards-wrap__card__bottom">
+                            <div class="cards-wrap__card__bottom__text">
+                                <h4 class="cards-wrap__card__bottom__title">La palette du goût</h4>
+                                <p class="cards-wrap__card__bottom__subtitle">Ménilmontant</p>
+                            </div>
+
+                            <i class="cards-wrap__card__bottom__icon fa-regular fa-heart">
+                                <i class="cards-wrap__card__bottom__icon--full fa-solid fa-heart"></i>
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="cards-wrap__card">
+                        <p class="cards-wrap__card__tag">Nouveau</p>
+                        <div class="cards-wrap__card__image">
+                            <img src="img/restaurants/la-note-enchantee.jpg" alt="">
+                        </div>
+                        <div class="cards-wrap__card__bottom">
+                            <div class="cards-wrap__card__bottom__text">
+                                <h4 class="cards-wrap__card__bottom__title">La note enchantée</h4>
+                                <p class="cards-wrap__card__bottom__subtitle">Charonne</p>
+                            </div>
+
+                            <i class="cards-wrap__card__bottom__icon fa-regular fa-heart">
+                                <i class="cards-wrap__card__bottom__icon--full fa-solid fa-heart"></i>
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="cards-wrap__card">
+                        <div class="cards-wrap__card__image">
+                            <img src="img/restaurants/a-la-francaise.jpg" alt="">
+                        </div>
+                        <div class="cards-wrap__card__bottom">
+                            <div class="cards-wrap__card__bottom__text">
+                                <h4 class="cards-wrap__card__bottom__title">À la française</h4>
+                                <p class="cards-wrap__card__bottom__subtitle">Cité Rouge</p>
+                            </div>
+
+                            <i class="cards-wrap__card__bottom__icon fa-regular fa-heart">
+                                <i class="cards-wrap__card__bottom__icon--full fa-solid fa-heart"></i>
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="cards-wrap__card">
+                        <div class="cards-wrap__card__image">
+                            <img src="img/restaurants/delice-des-sens.jpg" alt="">
+                        </div>
+                        <div class="cards-wrap__card__bottom">
+                            <div class="cards-wrap__card__bottom__text">
+                                <h4 class="cards-wrap__card__bottom__title">Le délice des sens</h4>
+                                <p class="cards-wrap__card__bottom__subtitle">Folie-Méricourt</p>
+                            </div>
+
+                            <i class="cards-wrap__card__bottom__icon fa-regular fa-heart">
+                                <i class="cards-wrap__card__bottom__icon--full fa-solid fa-heart"></i>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 <!-- ----------------------------------------------------------------------- -->
-        <footer></footer>
+        <footer class="footer">
+            <h4 class="footer__title">ohmyfood</h4>
+            <ul class="footer__list">
+                <li class="footer__list__item">
+                    <i class="footer__list__item__icon fa-solid fa-utensils"></i>
+                    <a class="footer__list__item__link" href="">Proposer un restaurant</a>               
+                </li>
+                <li class="footer__list__item">
+                    <i class="footer__list__item__icon footer__list__item__icon--hand fa-solid fa-handshake-angle"></i>
+                    <a class="footer__list__item__link" href="">Devenir partenaire</a>     
+                </li>
+                <li class="footer__list__item">
+                    <a class="footer__list__item__link" href="">Mentions légales</a>     
+                </li>
+                <li class="footer__list__item">
+                    <a class="footer__list__item__link" href="">Contact</a>     
+                </li>
+            </ul>
+        </footer>
 <!-- ----------------------------------------------------------------------- -->
     </div>
 <script src=""></script>

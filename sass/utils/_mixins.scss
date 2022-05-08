@@ -28,7 +28,7 @@
     width: 100%;
         display: block;
         overflow: hidden;
-        padding-top: 56.25%;
+        padding-top: 50.25%;
         position: relative;
         & img {
             position: absolute;
@@ -38,3 +38,26 @@
             transform: translate(-50%, -50%);
         }
 }
+@mixin img-radius{
+    border-top-left-radius: nth($radius, 1);
+    border-top-right-radius: nth($radius, 1);
+}
+
+@mixin margin-bot{
+    margin: 0 0 $size2 0;
+}
+@mixin card-shadow{
+    box-shadow: 5px 8px 20px $color-shadow;
+}
+@mixin tag-shadow{
+    box-shadow: 2px 2px 8px $color-dark;
+}
+
+/* @mixin btn{
+    border: none;
+    color: $color-white;
+    padding: $size2 $size3;
+    border-radius: nth($radius , 3);
+    background: linear-gradient($color-secondary, $color-primary);
+    cursor: pointer;
+} */
