@@ -1,11 +1,7 @@
 .menu-hero{
     position: relative;
     &__image{
-        width: 100%;
-        display: block;
-        & img{
-            width: 100%;
-        }
+        @include img-ratio;
     }
     &__title{
         width: 100%;
@@ -55,24 +51,82 @@
         margin: $size2 0;
         &__item{
             @include list-item;
-            flex-direction: column;
-            padding: $size2;
             border-radius: nth($radius, 1);
             background-color: $color-white;
-            &__name{
-                font-weight: $font-bold;
-                margin-bottom: $size1;
-            }
-            &__det{
+            margin: $size1 0;
+            align-items: inherit;
+            cursor: pointer;
+            &__plat{
                 width: 100%;
                 display: flex;
-                font-size: .9rem;
-                justify-content: space-between;
-                &__price{
-                    color: $color-dark;
+                flex-direction: column;
+                padding: .8rem;
+                &__name{
                     font-weight: $font-bold;
+                    margin-bottom: .1rem;
+                }
+                &__sub{
+                    font-size: .9rem;
+                }
+            }
+            &__price{
+                font-size: .9rem;
+                color: $color-dark;
+                font-weight: $font-bold;
+                align-self: flex-end;
+                padding: .8rem;
+            }
+            &__check{
+                background-color: $color-accent;
+                // width: 35%;
+                border-top-right-radius: nth($radius, 1);
+                border-bottom-right-radius: nth($radius, 1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                width: 0%;
+                transition: all .5s ease;
+                & i{
+                    color: $color-lighter;
+                    font-size: 20px;
+                    transform: rotate(45deg);
+                    transition: all .6s ease;
+                }
+            }
+            &:hover &{
+                &__plat{
+                    overflow: hidden;
+                    &__name{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden; 
+                    }
+                    &__sub{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden; 
+                    }
+                }
+                &__check{
+                    width: 25%;
+                    opacity: 1;
+                    & i{
+                        transform: rotate(360deg);
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes check-slide{
+    from{
+        opacity: 0;
+        width: 0%;
+    }
+    to{
+        opacity: 1;
+        width: 35%;
     }
 }

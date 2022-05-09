@@ -451,9 +451,16 @@ h3 {
 .menu-hero__image {
   width: 100%;
   display: block;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
 }
 .menu-hero__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
+  transform: translate(-50%, -50%);
 }
 .menu-hero__title {
   width: 100%;
@@ -525,28 +532,81 @@ h3 {
   position: relative;
   display: flex;
   align-items: baseline;
-  margin: 1rem 0;
   box-shadow: 5px 8px 20px rgba(53, 53, 53, 0.2);
-  flex-direction: column;
-  padding: 1rem;
   border-radius: 15px;
   background-color: white;
+  margin: 0.5rem 0;
+  align-items: inherit;
+  cursor: pointer;
 }
-.menus__list__item__name {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.menus__list__item__det {
+.menus__list__item__plat {
   width: 100%;
   display: flex;
-  font-size: 0.9rem;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.8rem;
 }
-.menus__list__item__det__price {
+.menus__list__item__plat__name {
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+.menus__list__item__plat__sub {
+  font-size: 0.9rem;
+}
+.menus__list__item__price {
+  font-size: 0.9rem;
   color: #353535;
   font-weight: 700;
+  align-self: flex-end;
+  padding: 0.8rem;
+}
+.menus__list__item__check {
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 0%;
+  transition: all 0.5s ease;
+}
+.menus__list__item__check i {
+  color: #F6F6F6;
+  font-size: 20px;
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+.menus__list__item:hover .menus__list__item__plat {
+  overflow: hidden;
+}
+.menus__list__item:hover .menus__list__item__plat__name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menus__list__item:hover .menus__list__item__plat__sub {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menus__list__item:hover .menus__list__item__check {
+  width: 25%;
+  opacity: 1;
+}
+.menus__list__item:hover .menus__list__item__check i {
+  transform: rotate(360deg);
 }
 
+@keyframes check-slide {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 35%;
+  }
+}
 .btn {
   transition: all 0.5s ease;
   position: relative;

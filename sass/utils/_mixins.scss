@@ -78,6 +78,5 @@
     position: relative;
     display: flex;
     align-items: baseline;
-    margin: $size2 0;
     @include card-shadow;
 }
