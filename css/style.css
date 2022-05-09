@@ -12,6 +12,28 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.sub_body--load {
+  animation: page-fade 0.5s ease-in-out forwards;
+}
+@keyframes page-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -240,6 +262,10 @@ h3 {
   .wrapper {
     padding: 2.5rem;
   }
+}
+
+.container--menu {
+  background-color: #F6F6F6;
 }
 
 .hero {
@@ -502,12 +528,10 @@ h3 {
   opacity: 1;
 }
 
-.container--menu {
-  background-color: #F6F6F6;
-}
-
 .menus {
-  padding: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 .menus__title {
   text-transform: uppercase;
@@ -517,7 +541,7 @@ h3 {
 .menus__title::after {
   content: "";
   display: block;
-  width: 15%;
+  width: 40px;
   height: 3px;
   background-color: #99E2D0;
   position: absolute;
@@ -538,6 +562,14 @@ h3 {
   margin: 0.5rem 0;
   align-items: inherit;
   cursor: pointer;
+  opacity: 0;
+  animation: fade-in 0.8s ease-in-out 0.2s forwards;
+}
+.menus__list__item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menus__list__item:nth-child(3) {
+  animation-delay: 0.6s;
 }
 .menus__list__item__plat {
   width: 100%;
@@ -558,6 +590,7 @@ h3 {
   font-weight: 700;
   align-self: flex-end;
   padding: 0.8rem;
+  text-align: right;
 }
 .menus__list__item__check {
   background-color: #99E2D0;
@@ -596,17 +629,12 @@ h3 {
 .menus__list__item:hover .menus__list__item__check i {
   transform: rotate(360deg);
 }
-
-@keyframes check-slide {
-  from {
-    opacity: 0;
-    width: 0%;
-  }
-  to {
-    opacity: 1;
-    width: 35%;
-  }
+.menus__btn {
+  width: 190px;
+  align-self: center;
+  margin: 2.5rem 0;
 }
+
 .btn {
   transition: all 0.5s ease;
   position: relative;
