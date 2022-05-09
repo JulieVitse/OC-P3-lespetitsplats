@@ -1,0 +1,78 @@
+.menu-hero{
+    position: relative;
+    &__image{
+        width: 100%;
+        display: block;
+        & img{
+            width: 100%;
+        }
+    }
+    &__title{
+        width: 100%;
+        padding: $size3 $size2 $size1 $size2;
+        background-color: $color-lighter;
+        position: absolute;
+        bottom: 0;
+        border-top-left-radius: nth($radius, 4);
+        border-top-right-radius: nth($radius, 4);
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        & h2{
+            font-family: $font-title;
+            font-weight: $font-normal;
+        }
+        &__icon{
+            font-size: 20px;
+            @include heart-icon;
+        }
+    }
+}
+
+.container--menu{
+    background-color: $color-lighter;
+}
+
+.menus{
+    padding: $size3 $size2;
+    &__title{
+        text-transform: uppercase;
+        font-weight: $font-normal;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 15%;
+            height: 3px;
+            background-color: $color-accent;
+            position: absolute;
+            margin-top: .25rem;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        margin: $size2 0;
+        &__item{
+            @include list-item;
+            flex-direction: column;
+            padding: $size2;
+            border-radius: nth($radius, 1);
+            background-color: $color-white;
+            &__name{
+                font-weight: $font-bold;
+                margin-bottom: $size1;
+            }
+            &__det{
+                width: 100%;
+                display: flex;
+                font-size: .9rem;
+                justify-content: space-between;
+                &__price{
+                    color: $color-dark;
+                    font-weight: $font-bold;
+                }
+            }
+        }
+    }
+}

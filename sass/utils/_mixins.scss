@@ -28,7 +28,7 @@
     width: 100%;
         display: block;
         overflow: hidden;
-        padding-top: 50.25%;
+        padding-top: 56.25%;
         position: relative;
         & img {
             position: absolute;
@@ -51,4 +51,33 @@
 }
 @mixin tag-shadow{
     box-shadow: 2px 2px 8px $color-dark;
+}
+@mixin heart-icon{
+    position: relative;
+    transition: all .5s ease;
+    align-self: baseline;
+    cursor: pointer;
+    &:hover{
+        color: transparent;
+    }
+    &--full{
+        position: absolute;
+        left: 0;
+        background: linear-gradient(45deg, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transition: all .5s ease;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+@mixin list-item{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: $size2 0;
+    @include card-shadow;
 }

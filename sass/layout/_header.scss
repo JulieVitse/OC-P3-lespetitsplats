@@ -1,7 +1,14 @@
 .header{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    // justify-content: space-around;
+    flex-wrap: wrap;
+    &__back{
+        color: $color-dark;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: $size2;
+    }
     &__location{
         width: 100%;
         display: flex;
@@ -17,16 +24,17 @@
         }
     }
     &__logo{
-        padding: $size3 $size1 $size1 $size1;
+        padding: $size2 $size1 $size1 0;
         position: relative;
-        width: 100%;
+        // width: 100%;
         text-align: center;
+        margin: auto;
         @include desktop-small{
             text-align: left;
             padding: 1rem 0 0.5rem 1rem;
         }
         & img{
-            width: 55%;
+            width: 70%;
             @include tablet-only{
                 width: 35%;
             }
