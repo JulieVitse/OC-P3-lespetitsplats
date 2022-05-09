@@ -1,0 +1,35 @@
+.btn{
+    transition: all .5s ease;
+    position: relative;
+    border: none;
+    color: $color-white;
+    padding: $size2 $size3;
+    border-radius: nth($radius , 3);
+    background: linear-gradient($color-secondary, $color-primary);
+    cursor: pointer;
+    z-index: 10;
+    @include card-shadow;
+    @include desktop-med{
+        font-size: 18px;
+    }
+    &::before{
+        border-radius: inherit;
+        background: linear-gradient(lighten($color-secondary,5%), lighten($color-primary, 5%));
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        z-index: -10;
+        transition: all .5s ease;
+    }
+    &:hover{
+        box-shadow: 5px 8px 20px #7a7a7a;
+        &::before{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.wrapper{
+    padding: $size4 $size3;
+    @include desktop-small{
+        padding: $size4;
+    }
+}

@@ -1,0 +1,10 @@
+h3{
+    font-size: 1.5rem;
+    margin-bottom: $size1;
+    @include desktop-small{
+        font-size: 2rem;
+    }
+    @include desktop-med{
+        margin-bottom: $size3;
+    }
+}

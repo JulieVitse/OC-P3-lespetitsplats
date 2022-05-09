@@ -52,12 +52,3 @@
 @mixin tag-shadow{
     box-shadow: 2px 2px 8px $color-dark;
 }
-
-/* @mixin btn{
-    border: none;
-    color: $color-white;
-    padding: $size2 $size3;
-    border-radius: nth($radius , 3);
-    background: linear-gradient($color-secondary, $color-primary);
-    cursor: pointer;
-} */

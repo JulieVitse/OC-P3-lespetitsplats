@@ -1,0 +1,166 @@
+.hero{
+    background-color: $color-lighter;
+    padding: $size4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include desktop-small{
+        align-items: flex-start;
+        padding: 4rem $size4;
+    }
+    &__title{
+        @include margin-bot;
+        font-size: $size3;
+        font-weight: $font-bolder;
+        @include desktop-small{
+            font-size: $size4;
+        }
+    }
+    &__subtitle{
+        font-weight: $font-normal;
+        font-size: 1.15rem;
+        color: $color-dark;
+        font-weight: $font-light;
+        @include margin-bot;
+        @include desktop-small{
+            font-size: $size3;
+        }
+    }
+    &__btn{
+        margin: $size2 0;
+    }
+}
+
+.fonct{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        @include tablet-only{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include desktop-large{
+            width: 80%;
+        }
+        &__item{
+            position: relative;
+            display: flex;
+            align-items: baseline;
+            margin: $size2 0;
+            border-radius: nth($radius, 2);
+            padding: $size3;
+            background-color: $color-lighter;
+            @include card-shadow;
+            @include tablet-only{
+                flex-basis: 48%;
+            }
+            @include desktop-med{
+                flex-basis: 30%;
+            }
+            &--active{
+                background-color: lighten($color-primary, 35%)
+            }
+            &__number{
+                position: absolute;
+                top: 20px;
+                left: -15px;
+                background-color: $color-primary;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                padding: 4px;
+                color: $color-white;
+            }
+            &__icon{
+                color: lighten($color-dark, 25%);
+                @include desktop-small{
+                    font-size: 20px;
+                }
+                &--active{
+                    color: $color-primary;
+                }
+            }
+            &__text{
+                font-weight: $font-bold;
+                margin-left: $size2;
+                @include desktop-small{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.cards-wrap{
+    display: flex;
+    flex-direction: column;
+    @include tablet-only{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card{
+        border-radius: nth($radius, 1);
+        @include card-shadow;
+        margin: $size2 0;
+        position: relative;
+        cursor: pointer;
+        @include tablet-only{
+            flex-basis: 48%;
+        }
+        @include desktop-large{
+            flex-basis: 24%;
+        }
+        &__tag{
+            position: absolute;
+            right: 0;
+            background-color: $color-accent;
+            color: darken($color-accent, 40%);
+            z-index: 1;
+            font-size: 14px;
+            font-weight: $font-medium;
+            padding: $size1 $size2;
+            margin: $size2;
+            border-radius: 3px;
+            @include tag-shadow;
+        }
+        &__image{
+            @include img-ratio;
+            @include img-radius;
+        }
+        &__bottom{
+            padding: $size2;
+            display: flex;
+            justify-content: space-between;
+            @include desktop-med{
+                font-size: 20px;
+            }
+            &__icon{
+                position: relative;
+                transition: all .5s ease;
+                align-self: baseline;
+                cursor: pointer;
+                &:hover{
+                    color: transparent;
+                }
+                &--full{
+                    position: absolute;
+                    left: 0;
+                    background: linear-gradient(45deg, $color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    transition: all .5s ease;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

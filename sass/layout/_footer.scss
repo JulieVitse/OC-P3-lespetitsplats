@@ -1,0 +1,43 @@
+.footer{
+    padding: $size3;
+    background-color: $color-dark;
+    &__title{
+        color: $color-white;
+        font-family: $font-title;
+        font-weight: $font-normal;
+        font-size: 1.2rem;
+        margin-bottom: $size3;
+    }
+    &__list{
+        margin-bottom: $size1;
+        @include desktop-small{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            color: $color-white;
+            margin-bottom: $size1;
+            transition: all .5s ease;
+            &:hover{
+                color: $color-secondary;
+            }
+            &__icon{
+                margin-right: $size2;
+                font-size: 14px;
+                &--hand{
+                    margin-right: calc(1rem - 5px);
+                }
+            }
+            &__link{
+                color: $color-white;
+                transition: all .5s ease;
+                &:hover{
+                    color: $color-secondary;
+                }
+            }     
+        }
+    }
+}
