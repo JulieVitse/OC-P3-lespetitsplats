@@ -181,8 +181,11 @@
                 }
                 &__check{
                     // width: 25%;
-                    flex-basis: 25%;
+                    flex-basis: 15%;
                     opacity: 1;
+                    @include tablet-only{
+                        flex-basis: 10%;
+                    }
                     & i{
                         transform: rotate(360deg);
                     }
