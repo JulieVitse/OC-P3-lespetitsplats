@@ -5,6 +5,9 @@
         @include desktop-small{
             padding-top: 33%;
         }
+        @include desktop-large{
+            padding-top: 25%;
+        }
     }
     &__title{
         width: 100%;

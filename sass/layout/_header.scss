@@ -24,23 +24,25 @@
         }
     }
     &__logo{
-        padding: $size2 $size1 $size1 0;
+        padding: $size2 0 $size1 0;
         position: relative;
-        // width: 100%;
-        text-align: center;
+        width: 40%;
+        // text-align: center;
         margin: auto;
-        @include desktop-small{
-            text-align: left;
-            padding: 1rem 0 0.5rem 1rem;
+        @include tablet-only{
+            width: 25%;
         }
-        & img{
-            width: 70%;
-            @include tablet-only{
-                width: 75%;
-            }
-            @include desktop-small{
+        @include desktop-small{
+            width: 15%;
+        }
+        @include desktop-large{
+            width: 10%;
+        }
+        & a{
+            display: block;
+            width: 100%;
+            & img{
                 width: 100%;
-                max-width: 150px;
             }
         }
     }
