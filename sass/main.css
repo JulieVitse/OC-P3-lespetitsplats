@@ -266,12 +266,12 @@ h3 {
 }
 @media screen and (min-width: 600px) {
   .header__logo img {
-    width: 35%;
+    width: 75%;
   }
 }
 @media screen and (min-width: 1024px) {
   .header__logo img {
-    width: 15%;
+    width: 100%;
     max-width: 150px;
   }
 }
@@ -555,6 +555,11 @@ h3 {
   width: 100%;
   transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 1024px) {
+  .menu-hero__image {
+    padding-top: 33%;
+  }
+}
 .menu-hero__title {
   width: 100%;
   padding: 1.5rem 1rem 0.5rem 1rem;
@@ -567,9 +572,34 @@ h3 {
   align-items: baseline;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .menu-hero__title {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-hero__title {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menu-hero__title {
+    width: 33%;
+  }
+}
 .menu-hero__title h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .menu-hero__title h2 {
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menu-hero__title h2 {
+    font-size: 2rem;
+  }
 }
 .menu-hero__title__icon {
   font-size: 20px;
@@ -594,11 +624,25 @@ h3 {
 .menu-hero__title__icon--full:hover {
   opacity: 1;
 }
+@media screen and (min-width: 1600px) {
+  .menu-hero__title__icon {
+    font-size: 24px;
+  }
+}
+
+.wrapper-menus {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2.5rem 0;
+  align-items: center;
+}
 
 .menus {
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
+  width: 99%;
 }
 .menus__title {
   text-transform: uppercase;
@@ -619,6 +663,13 @@ h3 {
   flex-direction: column;
   margin: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .menus__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .menus__list__item {
   position: relative;
   display: flex;
@@ -633,6 +684,21 @@ h3 {
   -webkit-animation: fade-in 0.8s ease-in-out 0.2s forwards;
           animation: fade-in 0.8s ease-in-out 0.2s forwards;
 }
+@media screen and (min-width: 768px) {
+  .menus__list__item {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menus__list__item {
+    flex-basis: 49%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menus__list__item {
+    flex-basis: 32%;
+  }
+}
 .menus__list__item:nth-child(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
@@ -642,17 +708,20 @@ h3 {
           animation-delay: 0.6s;
 }
 .menus__list__item__plat {
-  width: 100%;
+  flex-basis: 80%;
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  padding: 0.8rem 0.5rem;
+  transition: all 0.5s ease-out;
 }
 .menus__list__item__plat__name {
   font-weight: 700;
   margin-bottom: 0.1rem;
+  transition: all 0.5s ease-out;
 }
 .menus__list__item__plat__sub {
   font-size: 0.9rem;
+  transition: all 0.5s ease-out;
 }
 .menus__list__item__price {
   font-size: 0.9rem;
@@ -660,6 +729,7 @@ h3 {
   font-weight: 700;
   align-self: flex-end;
   padding: 0.8rem;
+  flex-basis: 20%;
   text-align: right;
 }
 .menus__list__item__check {
@@ -671,6 +741,7 @@ h3 {
   justify-content: center;
   opacity: 0;
   width: 0%;
+  flex-basis: 0%;
   transition: all 0.5s ease;
 }
 .menus__list__item__check i {
@@ -681,19 +752,32 @@ h3 {
 }
 .menus__list__item:hover .menus__list__item__plat {
   overflow: hidden;
+  transition: all 0.5s ease-out;
 }
 .menus__list__item:hover .menus__list__item__plat__name {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+@media screen and (min-width: 768px) {
+  .menus__list__item:hover .menus__list__item__plat__name {
+    white-space: normal;
+  }
 }
 .menus__list__item:hover .menus__list__item__plat__sub {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+@media screen and (min-width: 768px) {
+  .menus__list__item:hover .menus__list__item__plat__sub {
+    white-space: normal;
+  }
 }
 .menus__list__item:hover .menus__list__item__check {
-  width: 25%;
+  flex-basis: 25%;
   opacity: 1;
 }
 .menus__list__item:hover .menus__list__item__check i {

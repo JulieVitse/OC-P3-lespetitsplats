@@ -2,6 +2,9 @@
     position: relative;
     &__image{
         @include img-ratio;
+        @include desktop-small{
+            padding-top: 33%;
+        }
     }
     &__title{
         width: 100%;
@@ -14,21 +17,48 @@
         display: flex;
         align-items: baseline;
         justify-content: space-between;
+        @include tablet-med{
+            justify-content: flex-start;
+        }
+        @include desktop-small{
+            width: 50%;
+        }
+        @include desktop-large{
+            width: 33%;
+        }
         & h2{
             font-family: $font-title;
             font-weight: $font-normal;
+            @include tablet-med{
+                margin-right: $size4;
+            }
+            @include desktop-large{
+                font-size: 2rem;
+            }
         }
         &__icon{
             font-size: 20px;
             @include heart-icon;
+            @include desktop-large{
+                font-size: 24px;
+            }
         }
     }
+}
+
+.wrapper-menus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: $size4 0;
+    align-items: center;
 }
 
 .menus{
     padding: $size1 $size2;
     display: flex;
     flex-direction: column;
+    width: 99%;
     &__title{
         text-transform: uppercase;
         font-weight: $font-normal;
@@ -47,8 +77,14 @@
         display: flex;
         flex-direction: column;
         margin: $size2 0;
+        @include tablet-med{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between         
+        }
         &__item{
             @include list-item;
+            // max-width: 370px;
             border-radius: nth($radius, 1);
             background-color: $color-white;
             margin: $size1 0;
@@ -56,6 +92,15 @@
             cursor: pointer;
             opacity: 0;
             animation: fade-in .8s ease-in-out .2s forwards;
+            @include tablet-med{
+                width: 70%;
+            }
+            @include desktop-small{
+                flex-basis: 49%;
+            }
+            @include desktop-large{
+                flex-basis: 32%;
+            }
             &:nth-child(2){
                 animation-delay: .4s;
             }
@@ -63,16 +108,20 @@
                 animation-delay: .6s;
             }
             &__plat{
-                width: 100%;
+                // width: 100%;
+                flex-basis: 80%;
                 display: flex;
                 flex-direction: column;
-                padding: .8rem;
+                padding: .8rem $size1;
+                transition: all .5s ease-out;
                 &__name{
                     font-weight: $font-bold;
                     margin-bottom: .1rem;
+                    transition: all .5s ease-out;
                 }
                 &__sub{
                     font-size: .9rem;
+                    transition: all .5s ease-out;
                 }
             }
             &__price{
@@ -81,6 +130,7 @@
                 font-weight: $font-bold;
                 align-self: flex-end;
                 padding: .8rem;
+                flex-basis: 20%;
                 // width: 20%;
                 text-align: right;
             }
@@ -94,6 +144,7 @@
                 justify-content: center;
                 opacity: 0;
                 width: 0%;
+                flex-basis: 0%;
                 transition: all .5s ease;
                 & i{
                     color: $color-lighter;
@@ -105,19 +156,29 @@
             &:hover &{
                 &__plat{
                     overflow: hidden;
+                    transition: all .5s ease-out;
                     &__name{
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        overflow: hidden; 
+                        overflow: hidden;
+                        transition: all .5s ease-out;
+                        @include tablet-med{
+                            white-space: normal;
+                        }
                     }
                     &__sub{
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        overflow: hidden; 
+                        overflow: hidden;
+                        transition: all .5s ease-out;
+                        @include tablet-med{
+                            white-space: normal;
+                        }
                     }
                 }
                 &__check{
-                    width: 25%;
+                    // width: 25%;
+                    flex-basis: 25%;
                     opacity: 1;
                     & i{
                         transform: rotate(360deg);
