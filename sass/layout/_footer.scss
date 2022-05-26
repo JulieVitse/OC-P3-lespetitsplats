@@ -15,6 +15,9 @@
             justify-content: space-between;
             width: 70%;
         }
+        @include desktop-large{
+            width: 35%;
+        }
         &__item{
             display: flex;
             align-items: center;

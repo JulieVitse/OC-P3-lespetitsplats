@@ -6,4 +6,6 @@
 }
 .container--menu{
     background-color: $color-lighter;
+    display: flex;
+    flex-direction: column;
 }

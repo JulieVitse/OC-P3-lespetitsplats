@@ -11,6 +11,7 @@
     justify-content: center;
     animation: fade-out .8s ease-out forwards;
     animation-delay: 3s;
+    // support FF ne prenant pas en compte backdrop-filter
     @supports (-moz-appearance:none){
         background-color: rgba(255, 255, 255, 0.801);
     }
@@ -31,7 +32,7 @@
         color: $color-dark;
         &::before{
             content: "Loading...";
-            animation: load-text .9s ease-in 1.5s forwards;
+            animation: load-text .9s ease-in 1.8s forwards;
         }
     }
     @keyframes load-text{
