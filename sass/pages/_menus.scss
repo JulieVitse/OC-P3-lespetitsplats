@@ -179,6 +179,9 @@
                     width: 25%;
                     //flex-basis: 25%;
                     opacity: 1;
+                    @include tablet-only{
+                        flex-basis: 10%;
+                    }
                     & i{
                         transform: rotate(360deg);
                     }

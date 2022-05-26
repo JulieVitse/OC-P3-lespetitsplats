@@ -717,6 +717,11 @@ h3 {
   width: 25%;
   opacity: 1;
 }
+@media screen and (min-width: 599px) {
+  .menus__list__item:hover .menus__list__item__check {
+    flex-basis: 10%;
+  }
+}
 .menus__list__item:hover .menus__list__item__check i {
   transform: rotate(360deg);
 }
